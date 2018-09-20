@@ -43,4 +43,23 @@ anime({
 
 
 
-## SVG Animations
+# API
+
+## targets
+
+定义了需要绑定动画的元素或者js对象
+可以使用的类型：
+- css 选择器: `div` | `.item` | `#el`
+- DOM 元素
+- NodeList（DOM元素数组）
+- 对象
+- 数组（由上面的类型组成）
+
+## 动画属性
+
+可用类型：
+- css
+- Transforms(css3 中定义的属性)
+- 对象属性
+- DOM 属性
+- SVG 属性
