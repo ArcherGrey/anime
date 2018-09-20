@@ -107,3 +107,39 @@ anime({
 ```
 
 ~~（存疑）如何直接将`javascript 对象属性`显示到页面中（使用vue可以实现似乎原生操作难以实现）~~
+
+
+DOM 属性：
+```
+<input value="0">
+anime({
+  targets: input,
+  value: 1000, // Animate the input value to 1000
+  round: 1 // Remove decimals by rounding the value
+});
+```
+
+SVG 属性：
+```
+<svg width="128" height="128" viewBox="0 0 128 128">
+  <polygon points="64 68.73508918222262 8.574 99.9935923731656 63.35810017508558 67.62284396863708 64 3.993592373165592 64.64189982491442 67.62284396863708 119.426 99.9935923731656"></polygon>
+</svg>
+
+anime({
+  targets: 'polygon',
+  points: '64 128 8.574 96 8.574 32 64 0 119.426 32 119.426 96'
+});
+```
+
+## 属性参数
+
+定义每个属性动画的持续时间，延迟和缓动。
+可以全局设置，也可以单独设置为每个属性：
+
+| 名称 | 默认值 | 类型 | 单位
+| --- | --- | --- | ---
+| duration | `1000` | `number`, `function`  | millisecond
+| delay | `0` | `number`, `function`   | millisecond
+| easing | `'easeOutElastic'` | `function`  | [See Easing functions](#easing-functions)
+| elasticity | `500` | `number`, `function` | Range [0 - 1000]
+| round | `false` | `number`, `boolean`, `function` | Power of 10
