@@ -8,7 +8,7 @@
 - [CSS transforms](#CSS-transforms)(css 变换)：CSS 动画单独转换
 - [Function based values](#Function-based-values)(函数通过值来控制)：多个动画目标可以具有单独的值
 - [SVG Animations](#SVG-Animations)(SVG 动画)：运动路径，线条图和变形动画
-- [Easing functions](#Easing-functions)(缓动函数)：使用内置函数或者自己创建的函数来实现贝尔萨曲线
+- [easing functions](#Easing-functions)(缓动函数)：使用内置函数或者自己创建的函数来实现贝尔萨曲线
 
 <br>
 
