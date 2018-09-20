@@ -48,18 +48,31 @@ anime({
 ## targets
 
 定义了需要绑定动画的元素或者js对象
-可以使用的类型：
-- css 选择器: `div` | `.item` | `#el`
-- DOM 元素
-- NodeList（DOM元素数组）
-- 对象
-- 数组（由上面的类型组成）
+
+| 类型 | 例子
+| --- | ---
+| CSS Selectors | `'div'`, `'.item'`, `'path'`, `'#el path'` ...
+| DOM Element | `document.querySelector('.item')`
+| NodeList | `document.querySelectorAll('.item')`
+| `Object` | `{prop1: 100, prop2: 200}`
+| `Array` | `['div', '.item', domNode]`
 
 ## 动画属性
 
-可用类型：
-- css
-- Transforms(css3 中定义的属性)
-- 对象属性
-- DOM 属性
-- SVG 属性
+| 类型 | 例子
+| --- | ---
+| CSS | `opacity`, `backgroundColor`, `fontSize` ...
+| Transforms | `translateX`, `rotate`, `scale` ...
+| Object properties | Any `Object` property containing numerical values
+| DOM attributes | Any DOM attributes containing numerical values
+| SVG attributes | Any SVG attributes containing numerical values
+
+普通css:
+```
+anime({
+  targets: 'div',
+  left: '80%', // Animate all divs left position to 80%
+  opacity: .8, // Animate all divs opacity to .8
+  backgroundColor: '#FFF' // Animate all divs background color to #FFF
+});
+```
