@@ -1,5 +1,7 @@
 # 官方文档
 
+~~（存疑）部分待补充~~
+
 # 安装和使用
 
 npm 方式：
@@ -88,4 +90,20 @@ anime({
 ```
 
 
-**注：不清楚两者之间有什么区别**
+~~（存疑）不清楚两者之间有什么区别~~
+
+`javascript` 对象属性：
+```
+var myObject = {
+  prop1: 0,
+  prop2: '0%'
+}
+
+anime({
+  targets: myObject,
+  prop1: 50, // Animate the 'prop1' property from myObject to 50
+  prop2: '100%' // Animate the 'prop2' property from myObject to 100%
+});
+```
+
+~~（存疑）如何直接将`javascript 对象属性`显示到页面中（数据绑定）~~
