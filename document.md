@@ -7,7 +7,7 @@
 - [Playback controls](#Playback-controls)(播放控制)：播放，暂停，重新启动，搜索动画或时间线
 - [CSS transforms](#CSS-transforms)(css 变换)：CSS 动画单独转换
 - [Function based values](#function-based-values)(函数通过值来控制)：多个动画目标可以具有单独的值
-- [SVG Animations](#svg-Animations)(SVG 动画)：运动路径，线条图和变形动画
+- [SVG Animations](#svg-animations)(SVG 动画)：运动路径，线条图和变形动画
 - [Easing functions](#easing-functions)(缓动函数)：使用内置函数或者自己创建的函数来实现贝尔萨曲线
 
 <br>
