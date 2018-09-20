@@ -76,3 +76,16 @@ anime({
   backgroundColor: '#FFF' // Animate all divs background color to #FFF
 });
 ```
+
+独立的css变换：
+```
+anime({
+  targets: 'div',
+  translateX: 250, // Animate all divs translateX property to 250px
+  scale: 2, // Animate all divs scale to 2
+  rotate: '1turn' // Animate all divs rotation to 1 turn
+});
+```
+
+
+**注：不清楚两者之间有什么区别**
