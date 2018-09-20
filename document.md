@@ -10,53 +10,10 @@
 - [SVG Animations](#SVG-Animations)(SVG 动画)：运动路径，线条图和变形动画
 - [Easing functions](#Easing-functions)(缓动函数)：使用内置函数或者自己创建的函数来实现贝尔萨曲线
 
-ss
-s
-s
-s
-s
-s
-s
-s
+<br>
 
-ss
-s
-s
-s
-s
-s
-s
-s
-ss
-s
-s
-s
-s
-s
-s
-s
-ss
-s
-s
-s
-s
-s
-s
-s
-ss
-s
-s
-s
-s
-s
-s
-s
-ss
-s
-s
-s
-s
-s
-s
-s
+
+<br>
+
+
 ## #Easing-functions
