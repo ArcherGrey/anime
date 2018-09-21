@@ -512,7 +512,7 @@ var myAnimation = anime({
 
 ## SVG
 
-运动轨迹
+### 轨迹运动
 沿SVG路径转换和旋转DOM元素：
 ```
 // Create a path `Object`
@@ -525,4 +525,163 @@ var motionPath = anime({
   rotate: path('angle')  // Follow the angle values from the path `Object`
 });
 ```
+
+~~(存疑)网上的例子中 path 后面没有括号和参数，实际测试使用必须有，但是网上的例子没有也可以跑~~
+
+### 变形
+
+为两个SVG图形之间的过渡设置动画：
+```
+<svg class="shape" width="128" height="128" viewBox="0 0 128 128">
+  <polygon points="64 68.64 8.574 100 63.446 67.68 64 4 64.554 67.68 119.426 100"></polygon>
+</svg>
+var svgAttributes = anime({
+  targets: '.shape polygon',
+  points: '64 128 8.574 96 8.574 32 64 0 119.426 32 119.426 96'
+});
+```
+
+两个图形需要有相同的顶点数
+
+### 画线
+
+根据SVG形状的线条绘制动画：
+```
+anime({
+  targets: '.shape path',
+  strokeDashoffset: [anime.setDashoffset, 0]
+});
+```
+
+## Easing functions
+
+`easing`参数可以接受字符串或自定义`Bézier`曲线坐标（数组）
+
+| 类型 | 例子 | 说明
+| --- | --- | ---
+| String | `'easeOutExpo'` | Built in function names
+| `Array` | [.91,-0.54,.29,1.56] | Custom Bézier curve coordinates ([x1, y1, x2, y2])
   
+线性 easing: 'linear'  
+通过已有函数名：
+
+| easeIn | easeOut | easeInOut
+| --- | --- | ---
+| easeInQuad | easeOutQuad | easeInOutQuad |
+| easeInCubic | easeOutCubic | easeInOutCubic
+| easeInQuart | easeOutQuart | easeInOutQuart
+| easeInQuint | easeOutQuint | easeInOutQuint
+| easeInSine | easeOutSine | easeInOutSine
+| easeInExpo | easeOutExpo | easeInOutExpo
+| easeInCirc | easeOutCirc | easeInOutCirc
+| easeInBack | easeOutBack | easeInOutBack
+| easeInElastic | easeOutElastic | easeInOutElastic
+
+```
+anime({
+  targets: 'div',
+  translateX: 100,
+  easing: 'easeOutExpo' // Default 'easeOutElastic'
+});
+```
+弹性可以使用弹性参数进行配置：
+```
+anime({
+  targets: 'div',
+  translateX: 100,
+  easing: 'easeOutElastic',
+  elasticity: 600 // Default 500, range [0-1000]
+});
+```
+
+
+自定义Bézier曲线：
+```
+anime({
+  targets: 'div',
+  translateX: 100,
+  easing: [.91,-0.54,.29,1.56]
+});
+```
+
+定义自定义函数:
+```
+// Add custom function
+anime.easings['myCustomEasingName'] = function(t) {
+  return Math.pow(Math.sin(t * 3), 3);
+}
+
+// Usage
+anime({
+  targets: 'div',
+  translateX: 100,
+  easing: 'myCustomEasingName'
+});
+
+// add custom Bézier curve function
+anime.easings['myCustomCurve'] = anime.bezier([.91,-0.54,.29,1.56]);
+
+// Usage
+anime({
+  targets: 'div',
+  translateX: 100,
+  easing: 'myCustomCurve'
+});
+```
+
+## 一些常用的属性和方法
+
+> anime.speed = x
+
+更改所有动画速度（从0到1）
+
+> anime.running
+
+返回所有活动Anime实例的数组
+
+> anime.remove(target)
+
+从动画中删除一个或多个目标
+
+> anime.getValue(target, property)
+
+从元素中获取当前有效值: `anime.getValue('div', 'translateX'); // Return '100px'`
+
+> anime.path(pathEl)
+
+为运动路径动画创建路径功能。
+接受DOM节点或CSS选择器。
+`var path = anime.path('svg path', 'translateX'); // Return path(attribute)`
+
+> anime.setDashoffset(pathEl)
+
+线条绘制动画的帮助器。
+将'stroke-dasharray'设置为总路径长度并返回其值。
+
+```
+anime({
+  targets: '.shape path',
+  strokeDashoffset: [anime.setDashoffset, 0]
+});
+```
+
+> anime.easings
+
+返回内置缓动函数的完整列表
+
+> anime.bezier(x1, x2, y1, y2)
+
+返回自定义Bézier曲线缓动函数
+
+> anime.timeline()
+
+创建时间轴以同步其他Anime实例
+```
+var timeline = anime.timeline();
+timeline.add([instance1, instance2, ...]);
+```
+
+> anime.random(x, y)
+
+在两个数字之间生成一个随机数
+
