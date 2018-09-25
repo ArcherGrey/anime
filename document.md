@@ -191,6 +191,7 @@ anime({
 ## 动画参数
 
 设置动画的指定方向，循环次数或自动播放：
+
 | 名称 | 默认值 | 类型
 | --- | --- | ---
 | loop | `false` | `number`, `boolean`
@@ -213,6 +214,7 @@ anime({
 ### 单个值
 定义动画的结束值。
 起始值是原始目标值，或默认转换值：
+
 | 类型 | 例子 | 说明
 | --- | --- | ---
 | Number | `100` | Automatically add original or default unit if needed
