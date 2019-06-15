@@ -440,6 +440,7 @@ seekAnim.seek(500); // Set the animation current time to 500ms
 ## 回调函数
 
 在动画或时间线开始，进行中或完成时执行函数：
+
 | 名称 | 类型 | 参数 | 说明
 | --- | --- | --- | ---
 | update | `function`| animation `Object` | Called at time = 0
