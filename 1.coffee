@@ -56,6 +56,7 @@ pre { left: 0%; }
   right:0%;
   position: fixed;
   border: dashed;
+  display:block !important;
 }
 
 
@@ -115,6 +116,61 @@ pre { left: 0%; }
   line-height: 500px;
 }
 
+/* 隐 藏 */
+.show{ 
+  display:none !important;
+}
+
+
+/* 双飞翼 */
+.show1{
+  display:block !important;
+  width:50%;
+  right:0%;
+  position: fixed;
+  border: dashed;
+}
+
+.head1 {
+  height:30px;
+  width:100%;
+  background-color:red;
+}
+
+.foot1{
+  height:30px;
+  width:100%;
+  background-color:red;
+  clear: both;
+}
+
+.content1{
+  float: left;
+  width:100%;
+}
+
+.center1{
+  min-height:500px;
+  background: green;    
+  margin: 0 100px;
+}
+
+.left1{
+  width: 100px;
+  float: left;
+  margin-left: -100%;
+  background: yellow;
+  min-height: 500px;
+}
+
+.right1{
+  width: 100px;
+  float: left;
+  margin-left: -100px;
+  background: pink;
+  min-height: 500px;
+}
+
 """
 
 openComment = false
@@ -155,16 +211,26 @@ writeStyles = (message, index, interval) ->
 $('body').append """
   <style id="style-tag"></style>
 	<pre id="style-text"></pre>
-  <div class='show'>
-  <div class='head'></div>
-  <div class='content'>
-  <div class='center'>
-  <span class='test'>测试</span>
+  <div class='show' style="display:none">
+    <div class='head'></div>
+    <div class='content'>
+      <div class='center'>
+        <span class='test'>测试</span>
+      </div>
+      <div class='left'></div>
+      <div class='right'></div>
+    </div>
+    <div class='foot'></div>
   </div>
-  <div class='left'></div>
-  <div class='right'></div>
-  </div>
-  <div class='foot'></div>
+
+  <div class="show1" style="display:none">
+    <div class="head1"></div>
+    <div class="content1">
+      <div class="center1"></div>
+    </div>
+    <div class="left1"></div>
+    <div class="right1"></div>
+    <div class="foot1"></div>
   </div>
 """
 
