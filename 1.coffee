@@ -63,49 +63,57 @@ pre { left: 0%; }
 圣杯布局
 */
 .head {
-            width: 100%;
-            height: 30px;
-            background: red;
-        }
+  width: 100%;
+  height: 30px;
+  background: red;
+}
 
-        .content {
-            padding: 0 100px;
-          
-        }
+.content {
+  padding: 0 100px;
+  
+}
 
-        .foot {
-            width: 100%;
-            height: 30px;
-            background: red;
-            clear: both;
-        }
+.foot {
+  width: 100%;
+  height: 30px;
+  background: red;
+  clear: both;
+}
 
-        .center {
-            width: 100%;
-            float: left;
-            background: green;
-            
-            min-height: 500px;
-        }
+.center {
+  width: 100%;
+  float: left;
+  background: green;   
+  min-height: 500px;
+}
 
-        .left {
-            position: relative;
-            width: 100px;
-            float: left;
-            right: 100px;
-            margin-left: -100%;
-            background: yellow;
-            min-height: 500px;
-        }
+.left {
+  position: relative;
+  width: 100px;
+  float: left;
+  right: 100px;
+  margin-left: -100%;
+  background: yellow;
+  min-height: 500px;
+}
 
-        .right {
-            width: 100px;
-            float: left;
-            margin-right: -100px;
-            background: pink;
-            min-height: 500px;
-        }
+.right {
+  width: 100px;
+  float: left;
+  margin-right: -100px;
+  background: pink;
+  min-height: 500px;
+}
 
+/* 水平居中 */
+.center{
+  text-align: center;
+}
+
+/* 垂直居中 */
+.center{
+  line-height: 500px;
+}
 
 """
 
@@ -150,7 +158,9 @@ $('body').append """
   <div class='show'>
   <div class='head'></div>
   <div class='content'>
-  <div class='center'></div>
+  <div class='center'>
+  <span class='test'>测试</span>
+  </div>
   <div class='left'></div>
   <div class='right'></div>
   </div>
