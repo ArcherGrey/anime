@@ -29,3 +29,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+
+# react-ts-test
+/react-ts-test/node_modules
