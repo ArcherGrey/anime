@@ -171,6 +171,12 @@ pre { left: 0%; }
   min-height: 500px;
 }
 
+
+/* 隐 藏 */
+.show1{ 
+  display:none !important;
+}
+
 """
 
 openComment = false

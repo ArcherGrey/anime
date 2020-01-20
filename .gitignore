@@ -1,0 +1,31 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/public/lib/**
+#large files
+/public/data/demo/large/**
+# testing
+/coverage
+
+# production
+/build
+/dist
+/index.prod.html
+/public/system/*.prod.*
+
+#others
+/.vscode
+/.theia
+/*.zip
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
