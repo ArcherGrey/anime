@@ -10,6 +10,7 @@
 
 # three.js
 
-- 官方文档
+- 使用手册
   - 入门
-    - [创建一个屏幕](./three/manual/start/1.md)
+    - [创建一个场景](./three/manual/start/1.md)
+    - [通过模块导入](./three/manual/start/2.md)
