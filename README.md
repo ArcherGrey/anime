@@ -14,3 +14,4 @@
   - 入门
     - [创建一个场景](./three/manual/start/1.md)
     - [通过模块导入](./three/manual/start/2.md)
+    - [浏览器支持](./three/manual/start/3.md)
